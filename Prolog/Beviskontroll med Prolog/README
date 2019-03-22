@@ -1,0 +1,5 @@
+I den här laborationen ska du konstruera och implementera en algoritm som
+kontrollerar huruvida ett bevis skrivet i naturlig deduktion (som beskrivet i
+kursboken) är korrekt eller inte. Indata till ditt program är en sekvent och
+ett bevis, och programmet ska svara “yes” om det givna beviset är korrekt
+och visar att den givna sekventen gäller och “no” annars.
