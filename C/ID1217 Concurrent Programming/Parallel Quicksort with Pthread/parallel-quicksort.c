@@ -131,20 +131,20 @@ void *Quicksort(void *arg) {
 
 	    if(actWorkers < numWorkers) {
 			argsStrucLeft.start = start;
-	        argsStrucLeft.end = pidx-1;
+	        	argsStrucLeft.end = pidx-1;
 
 			pthread_mutex_lock(&lock);
 			actWorkers++;
 			pthread_mutex_unlock(&lock);
 
-	      	pthread_create(&worker, &attr, Quicksort, &argsStrucLeft);
+	      		pthread_create(&worker, &attr, Quicksort, &argsStrucLeft);
 
 			argsStrucRight.start = pidx+1;
 			argsStrucRight.end = end;
 
 			Quicksort(&argsStrucRight);
 
-	        pthread_join(worker, NULL);
+	        	pthread_join(worker, NULL);
 	    } else
 			quicksort(start, end);
     } 
