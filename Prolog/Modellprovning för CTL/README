@@ -1,0 +1,3 @@
+En modellprovare (engelska: model checker) är ett programverktyg som kontrollerar om en temporallogisk formel φ gäller i ett visst tillstånd s i en
+given modell M, dvs kontrollerar om M, s |= φ gäller. Här utvecklas och
+testas en modellprovare för en delmängd av reglerna i temporallogiken CTL
