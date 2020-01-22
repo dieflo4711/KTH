@@ -9,7 +9,7 @@ var parcoords = d3.parcoords()("#example")
   .alpha(0.4);
 
 // load csv file and create the chart
-d3.csv('data/table1.csv', function(data) {
+d3.csv('data/table.csv', function(data) {
   parcoords
     .data(data)
     .hideAxis(["Alias", "Major", "Interests"])
