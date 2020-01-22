@@ -18,7 +18,7 @@ d3.csv('data/table.csv', function(data) {
 
   // create data table, row hover highlighting
   var grid = d3.divgrid();
-  grid.columns(["Alias", "Major", "Interests"]);
+  grid.columns(["Alias", "Major"]);
   d3.select("#grid")
     .datum(data.slice(0,65))
     .call(grid)
