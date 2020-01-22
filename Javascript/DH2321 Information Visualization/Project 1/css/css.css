@@ -54,11 +54,11 @@ input {
 #example {
   font-size: 15px !important;
   margin: 20px 20px;
-  width: 1200px;
+  width: 1430px;
   background: #F9F7F6;
 }
 #grid { 
-  width: 700px;
+  /*width: 700px;*/
   height: 198px;
   margin: 40px 0px 0px 40px; 
   overflow-y:scroll;
@@ -91,5 +91,16 @@ input {
 }
 .col-0 { 
   width: 180px; 
+}
+
+.col-2 {
+  display: block;
+  width: 720px;
+}
+
+.col-2:hover {
+  height: auto;
+  white-space: normal;
+  word-wrap: break-word;
 }
   

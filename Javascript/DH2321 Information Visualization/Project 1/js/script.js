@@ -9,16 +9,16 @@ var parcoords = d3.parcoords()("#example")
   .alpha(0.4);
 
 // load csv file and create the chart
-d3.csv('data/table.csv', function(data) {
+d3.csv('data/table1.csv', function(data) {
   parcoords
     .data(data)
-    .hideAxis(["Alias", "Major"])
+    .hideAxis(["Alias", "Major", "Interests"])
     .render()
     .brushMode("1D-axes");  // enable brushing
 
   // create data table, row hover highlighting
   var grid = d3.divgrid();
-  grid.columns(["Alias", "Major"]);
+  grid.columns(["Alias", "Major", "Interests"]);
   d3.select("#grid")
     .datum(data.slice(0,65))
     .call(grid)
