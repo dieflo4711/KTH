@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project 2</title>
+        <meta name="dleon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/d3.min.js"></script>    
+        <script src="js/sylvester.js"></script> 
+        <script src="js/jquery-1.7.min.js"></script>
+        <script src="js/underscore.js"></script> 
+        <script src="js/underscore.math.js"></script>
+        <script src="js/d3.svg.multibrush.js"></script> 
+        <script src="js/d3.parcoords.js"></script>
+        <script src="js/divgrid.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/d3.parcoords.css">
+        <link rel="stylesheet" type="text/css" href="css/css.css">
+    </head>
+    <body onload="showViz('95_99')">
+        <div id="wrapper">
+            <div class="nav">
+                <div class="range" id="95_99" onclick="showViz('95_99')">1995-1999</div>
+                <div class="range" id="00_04" onclick="showViz('00_04')">2000-2004</div>
+                <div class="range" id="05_09" onclick="showViz('05_09')">2005-2009</div>
+                <div class="range" id="10_14" onclick="showViz('10_14')">2010-2014</div>
+            </div>
+            <div id="example" class="parcoords" style="height:200px;"></div>
+            <div id="sub-wrapper">
+                <div id="grid-contianer">
+                    <div id="grid" class="isGrid"></div>
+                    <div id="grid2" class="isGrid">
+                        <div id="gridScroll"></div>
+                    </div>
+                </div>
+                <div id="discovery-section">
+                    <div class="nav" id="discovery-nav">
+                        <div class="discovery-label activeDiscoveryLabel" id="disc1">Discovery process 1</div>
+                        <div class="discovery-label" id="disc2">Discovery process 2</div>
+                    </div>
+                    <div id="discovery-main-container">
+                        <div class="discovery-container activeDiscovery" id="disc1">
+                            <p>
+                                I want to know if a correlation exists between trusting the police and trusting the justice system.
+                                By choosing the period 1995-1998 and selecting all available countries we then proceed to chose the 
+                                survey "Confidence : The police". 
+                            </p>
+                            <img width="500px" src="img/wws_responses.jpg">
+                            <p>
+                                The image above shows the confidence that people from different countries have in the police. 
+                            </p>
+                            <img width="500px" src="img/wws_graph.jpg">
+                            <p>
+                                WWS provides an option to visualize the data as a graph, see the image above. The same process 
+                                can be applied for the survey "Confidence: Justice System/Courts". However, no tools exist to 
+                                visualize the results from both surveys at once.
+                            </p>
+                        </div>
+                        <div class="discovery-container" id="disc2">
+                            <p>
+                                This time I used the created visualization tool to explore the relationships in the data from the
+                                different surveys.
+                            </p>
+                            <img width="500px" src="img/my_viz.png">
+                            <p>
+                                With D3 parcoords it's possible to visualize multiple variables at once. One axis for each confidence 
+                                survey. This way it comes easy to see the correaltion between survey data.
+                            </p>
+                            <img width="500px" src="img/my_viz_table.png">
+                            <p>
+                                It's also possible to contextualize the countries in their geographical locations by selecting which
+                                continents you want to show data for.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body onload="myFunction()">
+</html>
